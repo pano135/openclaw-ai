@@ -8,15 +8,15 @@ const InstallationGuide: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const scripts = {
-    docker: `curl -fsSL https://get.openclaw-ai.pro/docker-setup.sh | sh
-# Defaults to Port 3000
-# Requires Docker Compose v2.2+`,
-    mac: `brew install openclaw-core
-# Optimized for M4/M5 Chips
-openclaw init --device=mac-mini-server --background`,
-    wsl: `sudo apt update && sudo apt install wsl-openclaw
-# Ensure WSL2 is enabled
-openclaw-wsl start --gpu=nvidia`,
+    docker: `docker run -it -v $(pwd):/agent openclaw/openclaw setup
+# Pulls the official OpenClaw image
+# Configures local volumes for persistent storage`,
+    mac: `curl -fsSL https://openclaw.ai/install.sh | bash
+# Automated script for macOS Monterey+
+# Installs Homebrew, Podman, and Node.js v22`,
+    wsl: `curl -fsSL https://openclaw.ai/install.sh | bash
+# Compatible with Ubuntu 22.04+ on WSL2
+# Launches interactive setup wizard automatically`,
   };
 
   const copyToClipboard = () => {

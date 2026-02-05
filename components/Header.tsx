@@ -27,7 +27,7 @@ const Header: React.FC = () => {
               OC
             </div>
             <span className="text-xl font-bold tracking-tight text-white">
-              OpenClaw<span className="text-cyan-500">.pro</span>
+              OpenClaw<span className="text-cyan-500"> AI</span>
             </span>
           </Link>
 
