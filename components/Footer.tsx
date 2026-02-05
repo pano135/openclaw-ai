@@ -38,9 +38,13 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 text-sm">
-            © 2026 OpenClaw AI. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4 text-xs text-slate-600">
+            <p>© 2026 OpenClaw AI. All rights reserved.</p>
+            <div className="flex gap-4">
+              <a href="/privacy" className="hover:text-slate-400">Privacy Policy</a>
+              <a href="/terms" className="hover:text-slate-400">Terms of Service</a>
+            </div>
+          </div>
           <div className="flex gap-4">
             <a href="#" className="text-slate-500 hover:text-white transition-colors">
               <Github className="h-5 w-5" />
